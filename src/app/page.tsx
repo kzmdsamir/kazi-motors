@@ -1,16 +1,16 @@
 import { Hero } from "@/components/Hero";
-import { HowToOrder } from "@/components/HowToOrder";
 import { Catalog } from "@/components/Catalog";
 import { ChassisFinder } from "@/components/ChassisFinder";
+import { HowToOrder } from "@/components/HowToOrder";
 import { Dholaikhal, WhyUs } from "@/components/InfoSections";
 
 export default function Home() {
   return (
     <div id="top">
       <Hero />
-      <HowToOrder />
       <Catalog />
       <ChassisFinder />
+      <HowToOrder />
       <Dholaikhal />
       <WhyUs />
     </div>

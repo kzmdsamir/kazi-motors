@@ -3,9 +3,9 @@ import { SiteShell } from "@/components/SiteShell";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Kazi Motors — Japanese Reconditioned Car Parts | Dhaka, Bangladesh",
+  title: "Kazi Motors — Genuine Japanese Reconditioned Car Parts | Dhaka, Bangladesh",
   description:
-    "Kazi Motors sells genuine Japanese reconditioned car parts in Dhaka, Bangladesh — engines, gearboxes, suspension, brakes, electrical, AC, body parts and more for Axio, Premio, Allion, Corolla, Noah and Hiace. Prices confirmed on enquiry.",
+    "Kazi Motors supplies genuine Japanese reconditioned car parts in Dhaka, Bangladesh — engines, gearboxes, suspension, brakes, electrical, AC, body parts, lights, and hybrid parts for Axio, Premio, Allion, Corolla, Noah, and Hiace. Prices confirmed on enquiry.",
   keywords: [
     "Kazi Motors",
     "reconditioned car parts Bangladesh",
@@ -15,13 +15,19 @@ export const metadata: Metadata = {
     "Axio parts",
     "Premio parts",
     "Allion parts",
+    "Corolla parts",
+    "Noah parts",
+    "Hiace parts",
   ],
+  icons: {
+    icon: "/favicon.svg",
+  },
   robots: { index: true, follow: true },
   openGraph: {
     type: "website",
-    title: "Kazi Motors — Japanese Reconditioned Car Parts",
+    title: "Kazi Motors — Genuine Japanese Reconditioned Car Parts",
     description:
-      "Genuine used parts from Japan for your Toyota. Find your part, save it to your enquiry list, and we confirm the price.",
+      "Genuine used parts from Japan matched to your Toyota by model or chassis number. Save your enquiry list and confirm pricing directly.",
     siteName: "Kazi Motors",
     locale: "en_BD",
   },
@@ -45,10 +51,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Store",
+              "@type": "AutoPartsStore",
               name: "Kazi Motors",
               description:
-                "Japanese reconditioned car parts shop in Dhaka, Bangladesh. Prices confirmed on enquiry.",
+                "Genuine Japanese reconditioned car parts specialist in Dhaka, Bangladesh. Prices confirmed on enquiry.",
+              areaServed: "Dhaka, Bangladesh",
               currenciesAccepted: "BDT",
               paymentAccepted: "Cash",
             }),
