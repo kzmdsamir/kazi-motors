@@ -1,0 +1,1203 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" href="data:," />
+    <title>Kazi Motors — Japanese Reconditioned Car Parts, Dhaka</title>
+    <meta name="description" content="Kazi Motors, Uttara Sector 15, Dhaka. Japanese reconditioned car parts for Toyota Axio, Premio, Allion, Noah, Probox & Succeed. Price on request — order by call or WhatsApp." />
+    <script>
+      // Set theme before paint: follow the system setting until the cord is pulled.
+      (function () {
+        var t = window.matchMedia && window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      :root {
+        --accent: #f2a41c;
+        --accent-ink: #1a1405;
+        --wa: #22c064;
+        --wa-ink: #06270f;
+        --radius: 14px;
+        --font-body: "Barlow", "Hind Siliguri", system-ui, sans-serif;
+        --font-display: "Barlow Condensed", "Hind Siliguri", "Barlow", sans-serif;
+      }
+      :root[data-theme="dark"] {
+        color-scheme: dark;
+        --bg: #0c0d10;
+        --bg-soft: #121317;
+        --surface: #17181d;
+        --surface-2: #1e2026;
+        --line: #2a2c33;
+        --line-soft: #22242a;
+        --text: #f3f1ea;
+        --muted: #a9a69b;
+        --faint: #76746c;
+        --shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
+        --cord: #d8cfb8;
+      }
+      :root[data-theme="light"] {
+        color-scheme: light;
+        --bg: #f4f3ef;
+        --bg-soft: #eceae3;
+        --surface: #ffffff;
+        --surface-2: #f6f4ee;
+        --line: #d9d5c9;
+        --line-soft: #e4e1d6;
+        --text: #17181c;
+        --muted: #5c5a52;
+        --faint: #8a877c;
+        --shadow: 0 18px 40px rgba(30, 28, 18, 0.16);
+        --cord: #6b5f43;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--text);
+        font-family: var(--font-body);
+        font-size: 16.5px;
+        line-height: 1.55;
+        -webkit-font-smoothing: antialiased;
+        transition: background 0.35s ease, color 0.35s ease;
+      }
+      button, [role="button"], select, summary, input:not([type="checkbox"], [type="radio"]) { min-height: 2.25rem; }
+      button { font-family: inherit; cursor: pointer; }
+      a { color: inherit; }
+      img { max-width: 100%; }
+      .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+      ::selection { background: var(--accent); color: var(--accent-ink); }
+
+      /* ---------- Header ---------- */
+      header.site {
+        position: sticky; top: 0; z-index: 60;
+        background: color-mix(in srgb, var(--bg) 88%, transparent);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid var(--line-soft);
+      }
+      .header-in { display: flex; align-items: center; gap: 14px; min-height: 64px; padding-right: 64px; }
+      .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; flex: none; }
+      .brand-mark {
+        width: 40px; height: 40px; border-radius: 10px; flex: none;
+        background: var(--accent); color: var(--accent-ink);
+        display: grid; place-items: center;
+      }
+      .brand-name { font-family: var(--font-display); font-weight: 700; font-size: 1.55rem; letter-spacing: 0.04em; line-height: 1; text-transform: uppercase; }
+      .brand-sub { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.08em; text-transform: uppercase; margin-top: 2px; }
+      nav.main { display: flex; gap: 4px; margin-left: auto; }
+      nav.main a {
+        text-decoration: none; font-weight: 600; font-size: 0.98rem; color: var(--muted);
+        padding: 10px 12px; border-radius: 9px; min-height: 40px; display: inline-flex; align-items: center;
+      }
+      nav.main a:hover { color: var(--text); background: var(--surface-2); }
+      .header-actions { display: flex; align-items: center; gap: 8px; margin-left: 6px; }
+      .lang-toggle {
+        display: flex; border: 1px solid var(--line); border-radius: 999px; overflow: hidden; background: var(--surface);
+      }
+      .lang-toggle button {
+        border: 0; background: transparent; color: var(--muted); font-weight: 700; font-size: 0.85rem;
+        padding: 6px 12px; min-height: 38px;
+      }
+      .lang-toggle button[aria-pressed="true"] { background: var(--accent); color: var(--accent-ink); }
+      .cart-btn {
+        position: relative; border: 1px solid var(--line); background: var(--surface); color: var(--text);
+        border-radius: 999px; padding: 8px 16px; font-weight: 700; font-size: 0.95rem;
+        display: inline-flex; align-items: center; gap: 8px; min-height: 40px;
+      }
+      .cart-btn:hover { border-color: var(--accent); }
+      .cart-count {
+        background: var(--accent); color: var(--accent-ink); border-radius: 999px;
+        min-width: 22px; height: 22px; display: inline-grid; place-items: center;
+        font-size: 0.8rem; font-weight: 800; padding: 0 6px;
+      }
+      @media (max-width: 760px) {
+        nav.main { display: none; }
+        .brand-sub { display: none; }
+        .header-in { padding-right: 56px; }
+      }
+
+      /* ---------- Pull cord (FeralUI-inspired, built from scratch) ---------- */
+      .cord-zone {
+        position: fixed; top: 0; right: 14px; z-index: 90;
+        width: 48px; height: 132px;
+        display: flex; justify-content: center;
+        pointer-events: none;
+      }
+      .cord-pivot {
+        transform-origin: 50% -6px;
+        display: flex; flex-direction: column; align-items: center;
+        pointer-events: none; will-change: transform;
+      }
+      .cord-mount {
+        width: 16px; height: 9px; border-radius: 0 0 6px 6px;
+        background: var(--surface-2); border: 1px solid var(--line); border-top: 0;
+      }
+      .cord-line {
+        width: 4px; height: 62px;
+        background: repeating-linear-gradient(45deg, var(--cord) 0 3px, color-mix(in srgb, var(--cord) 55%, transparent) 3px 6px);
+        border-radius: 2px;
+      }
+      .cord-knob {
+        pointer-events: auto;
+        margin-top: -2px; width: 40px; height: 40px; border-radius: 50%;
+        border: 2px solid var(--line);
+        background: radial-gradient(circle at 35% 30%, var(--surface-2), var(--surface) 70%);
+        color: var(--accent);
+        display: grid; place-items: center;
+        box-shadow: 0 6px 14px rgba(0,0,0,0.35);
+        touch-action: none; user-select: none; -webkit-user-select: none;
+        cursor: grab;
+      }
+      .cord-knob:active { cursor: grabbing; }
+      .cord-knob:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+      .cord-hint {
+        position: fixed; top: 118px; right: 8px; z-index: 89;
+        font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+        color: var(--faint); writing-mode: vertical-rl; pointer-events: none;
+      }
+      @media (max-width: 760px) { .cord-hint { display: none; } }
+
+      /* ---------- Hero ---------- */
+      .hero { padding: 56px 0 30px; position: relative; overflow: hidden; }
+      .hero-grid { display: grid; grid-template-columns: 1.25fr 0.75fr; gap: 34px; align-items: center; }
+      @media (max-width: 860px) { .hero-grid { grid-template-columns: 1fr; } }
+      .hero h1 {
+        font-family: var(--font-display); font-weight: 700; text-transform: uppercase;
+        font-size: clamp(2.6rem, 6.4vw, 4.4rem); line-height: 0.98; letter-spacing: 0.01em; margin: 0 0 16px;
+      }
+      .hero h1 .hl { color: var(--accent); }
+      .hero p.lede { font-size: 1.14rem; color: var(--muted); max-width: 34em; margin: 0 0 24px; }
+      .hero-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+      .btn {
+        display: inline-flex; align-items: center; gap: 9px; text-decoration: none;
+        font-weight: 700; font-size: 1rem; border-radius: 12px; padding: 12px 20px; min-height: 48px;
+        border: 1px solid transparent; transition: transform 0.12s ease, background 0.2s ease, border-color 0.2s ease;
+      }
+      .btn:active { transform: translateY(1px) scale(0.99); }
+      .btn-accent { background: var(--accent); color: var(--accent-ink); }
+      .btn-wa { background: var(--wa); color: var(--wa-ink); }
+      .btn-ghost { background: var(--surface); color: var(--text); border-color: var(--line); }
+      .btn-ghost:hover { border-color: var(--accent); }
+      .hero-models { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      .hero-models span.lbl { font-size: 0.82rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--faint); margin-right: 2px; }
+      .model-chip {
+        border: 1px solid var(--line); background: var(--surface); border-radius: 999px;
+        padding: 6px 13px; font-weight: 600; font-size: 0.92rem; min-height: 36px;
+      }
+      .hero-card {
+        background: var(--surface); border: 1px solid var(--line); border-radius: 18px;
+        padding: 22px; box-shadow: var(--shadow);
+      }
+      .hero-card h2 { font-family: var(--font-display); text-transform: uppercase; letter-spacing: 0.03em; font-size: 1.35rem; margin: 0 0 6px; }
+      .hero-card p { color: var(--muted); margin: 0 0 14px; font-size: 0.98rem; }
+      .hero-card label { display: block; font-weight: 700; font-size: 0.85rem; margin: 12px 0 5px; }
+      .hero-card input, .hero-card select {
+        width: 100%; border: 1px solid var(--line); background: var(--bg-soft); color: var(--text);
+        border-radius: 10px; padding: 10px 12px; font: inherit; font-size: 1rem; min-height: 46px;
+      }
+      .hero-card input:focus, .hero-card select:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+      .hero-card .btn { width: 100%; justify-content: center; margin-top: 16px; }
+      .fineprint { font-size: 0.83rem; color: var(--faint); margin-top: 10px; }
+
+      /* ---------- Trust strip ---------- */
+      .trust { border-top: 1px solid var(--line-soft); border-bottom: 1px solid var(--line-soft); background: var(--bg-soft); }
+      .trust-in { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; padding: 20px 0; }
+      @media (max-width: 760px) { .trust-in { grid-template-columns: 1fr; gap: 10px; } }
+      .trust-item { display: flex; gap: 12px; align-items: flex-start; }
+      .trust-item .ic { color: var(--accent); flex: none; margin-top: 2px; }
+      .trust-item strong { display: block; font-size: 1rem; }
+      .trust-item span { color: var(--muted); font-size: 0.93rem; }
+
+      /* ---------- Sections ---------- */
+      section.block { padding: 52px 0 8px; }
+      .sec-head { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; margin-bottom: 8px; }
+      .sec-head h2 { font-family: var(--font-display); font-weight: 700; text-transform: uppercase; font-size: clamp(1.8rem, 4vw, 2.5rem); margin: 0; letter-spacing: 0.02em; }
+      .sec-head p { color: var(--muted); margin: 0; max-width: 46em; }
+
+      /* ---------- Catalogue ---------- */
+      .toolbar { display: flex; flex-direction: column; gap: 14px; margin: 20px 0 22px; }
+      .search-row { display: flex; gap: 10px; flex-wrap: wrap; }
+      .search-box { position: relative; flex: 1 1 260px; }
+      .search-box svg { position: absolute; left: 13px; top: 50%; transform: translateY(-50%); color: var(--faint); pointer-events: none; }
+      .search-box input {
+        width: 100%; padding: 12px 14px 12px 42px; border-radius: 12px; min-height: 50px;
+        border: 1px solid var(--line); background: var(--surface); color: var(--text); font: inherit; font-size: 1.02rem;
+      }
+      .search-box input:focus { outline: 2px solid var(--accent); outline-offset: 1px; }
+      .chip-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+      .chip-row .chip-lbl { font-size: 0.8rem; font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase; color: var(--faint); margin-right: 2px; }
+      .chip {
+        border: 1px solid var(--line); background: var(--surface); color: var(--muted);
+        border-radius: 999px; padding: 8px 14px; font-weight: 600; font-size: 0.93rem; min-height: 38px;
+      }
+      .chip:hover { color: var(--text); border-color: var(--accent); }
+      .chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+      .result-count { color: var(--faint); font-size: 0.92rem; font-weight: 600; }
+      .parts-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(258px, 1fr)); gap: 16px; }
+      .part-card {
+        background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius);
+        padding: 18px; display: flex; flex-direction: column; gap: 10px;
+        transition: border-color 0.18s ease, transform 0.18s ease;
+      }
+      .part-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+      .part-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 10px; }
+      .part-ic {
+        width: 44px; height: 44px; border-radius: 11px; flex: none;
+        background: var(--surface-2); border: 1px solid var(--line-soft); color: var(--accent);
+        display: grid; place-items: center;
+      }
+      .part-cat { font-size: 0.76rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--faint); text-align: right; }
+      .part-card h3 { margin: 0; font-size: 1.13rem; line-height: 1.25; }
+      .part-bn { color: var(--muted); font-size: 0.95rem; margin-top: -6px; }
+      .fits { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+      .fits span { font-size: 0.8rem; font-weight: 600; background: var(--bg-soft); border: 1px solid var(--line-soft); color: var(--muted); border-radius: 999px; padding: 3px 9px; }
+      .price-line { display: flex; align-items: center; gap: 8px; font-weight: 700; color: var(--accent); font-size: 0.98rem; }
+      .part-actions { display: flex; gap: 8px; }
+      .part-actions .add-btn {
+        flex: 1; background: var(--accent); color: var(--accent-ink); border: 0; border-radius: 10px;
+        font-weight: 800; font-size: 0.95rem; padding: 10px 12px; min-height: 44px;
+        display: inline-flex; align-items: center; justify-content: center; gap: 7px;
+      }
+      .part-actions .wa-btn {
+        width: 44px; min-height: 44px; border-radius: 10px; flex: none;
+        background: var(--surface-2); border: 1px solid var(--line); color: var(--wa);
+        display: grid; place-items: center; text-decoration: none;
+      }
+      .part-actions .wa-btn:hover { border-color: var(--wa); }
+      .empty-state { border: 1px dashed var(--line); border-radius: var(--radius); padding: 34px 20px; text-align: center; color: var(--muted); }
+      .empty-state strong { color: var(--text); display: block; font-size: 1.1rem; margin-bottom: 4px; }
+
+      /* ---------- Cars ---------- */
+      .cars-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; margin-top: 20px; }
+      .car-card { background: var(--surface); border: 1px solid var(--line); border-radius: 18px; overflow: hidden; }
+      .car-photo { aspect-ratio: 16 / 9; background: var(--surface-2); display: grid; place-items: center; color: var(--faint); border-bottom: 1px solid var(--line-soft); }
+      .car-body { padding: 20px; }
+      .car-body h3 { font-family: var(--font-display); text-transform: uppercase; font-size: 1.6rem; margin: 0; letter-spacing: 0.02em; }
+      .car-price { font-size: 1.5rem; font-weight: 800; color: var(--accent); margin: 4px 0 12px; }
+      .car-specs { list-style: none; margin: 0 0 14px; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 14px; }
+      .car-specs li { font-size: 0.95rem; color: var(--muted); }
+      .car-specs li strong { color: var(--text); display: block; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.06em; }
+      .car-note { font-size: 0.9rem; color: var(--muted); border-top: 1px dashed var(--line); padding-top: 12px; margin: 0 0 16px; }
+      .car-body .btn { width: 100%; justify-content: center; }
+
+      /* ---------- Steps / about ---------- */
+      .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 20px; }
+      @media (max-width: 760px) { .steps { grid-template-columns: 1fr; } }
+      .step { background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius); padding: 20px; }
+      .step .num {
+        font-family: var(--font-display); font-size: 2rem; font-weight: 700; color: var(--accent); line-height: 1;
+      }
+      .step h3 { margin: 8px 0 6px; font-size: 1.1rem; }
+      .step p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+      .about-box { background: var(--surface); border: 1px solid var(--line-soft); border-radius: 18px; padding: 24px; margin-top: 20px; }
+      .about-box p { color: var(--muted); margin: 0 0 12px; max-width: 62em; }
+      .about-box p:last-child { margin-bottom: 0; }
+      .about-box strong { color: var(--text); }
+
+      /* ---------- Contact / footer ---------- */
+      .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px; margin-top: 20px; }
+      .contact-card { background: var(--surface); border: 1px solid var(--line-soft); border-radius: var(--radius); padding: 20px; }
+      .contact-card .ic { color: var(--accent); margin-bottom: 8px; }
+      .contact-card strong { display: block; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.07em; color: var(--faint); margin-bottom: 4px; }
+      .contact-card a, .contact-card span.val { font-weight: 700; font-size: 1.06rem; text-decoration: none; word-break: break-word; }
+      .contact-card a:hover { color: var(--accent); }
+      footer.site { margin-top: 60px; border-top: 1px solid var(--line-soft); padding: 26px 0 110px; color: var(--muted); font-size: 0.93rem; }
+      footer.site .wrap { display: flex; flex-wrap: wrap; gap: 10px 26px; align-items: center; justify-content: space-between; }
+
+      /* ---------- Floating WhatsApp ---------- */
+      .wa-float {
+        position: fixed; right: 16px; bottom: 16px; z-index: 70;
+        width: 58px; height: 58px; border-radius: 50%;
+        background: var(--wa); color: var(--wa-ink);
+        display: grid; place-items: center; box-shadow: 0 10px 24px rgba(0,0,0,0.4);
+        text-decoration: none;
+      }
+      .wa-float:hover { transform: scale(1.05); }
+
+      /* ---------- Cart drawer ---------- */
+      .scrim {
+        position: fixed; inset: 0; background: rgba(5, 5, 8, 0.6); z-index: 95;
+        opacity: 0; pointer-events: none; transition: opacity 0.25s ease;
+      }
+      .scrim.open { opacity: 1; pointer-events: auto; }
+      .drawer {
+        position: fixed; top: 0; right: 0; bottom: 0; z-index: 96;
+        width: min(420px, 94vw); background: var(--bg-soft);
+        border-left: 1px solid var(--line); box-shadow: var(--shadow);
+        transform: translateX(105%); transition: transform 0.3s cubic-bezier(0.32, 0.72, 0.24, 1);
+        display: flex; flex-direction: column;
+      }
+      .drawer.open { transform: translateX(0); }
+      .drawer[hidden] { display: none; }
+      .drawer-head { display: flex; align-items: center; justify-content: space-between; padding: 18px 20px; border-bottom: 1px solid var(--line-soft); }
+      .drawer-head h2 { font-family: var(--font-display); text-transform: uppercase; font-size: 1.4rem; margin: 0; letter-spacing: 0.03em; }
+      .icon-btn {
+        width: 42px; height: 42px; border-radius: 10px; border: 1px solid var(--line);
+        background: var(--surface); color: var(--text); display: grid; place-items: center;
+      }
+      .drawer-items { flex: 1; overflow-y: auto; padding: 14px 16px; display: flex; flex-direction: column; gap: 10px; }
+      .drawer-empty { text-align: center; color: var(--muted); padding: 40px 16px; }
+      .cart-item {
+        background: var(--surface); border: 1px solid var(--line-soft); border-radius: 12px;
+        padding: 13px 14px; display: flex; flex-direction: column; gap: 9px;
+        transform-origin: 50% 100%;
+      }
+      .cart-item.crumpling { animation: crumple 0.48s ease-in forwards; }
+      @keyframes crumple {
+        25% { transform: scale(0.84) rotate(-3deg) skewX(7deg); border-radius: 42% 58% 55% 45% / 55% 45% 58% 42%; filter: brightness(0.82) contrast(1.15); }
+        55% { transform: scale(0.48) rotate(9deg) skewY(4deg); border-radius: 50%; filter: brightness(0.7) contrast(1.25); opacity: 0.95; }
+        100% { transform: translateY(52px) scale(0.1) rotate(28deg); border-radius: 50%; opacity: 0; }
+      }
+      .cart-item .ci-top { display: flex; justify-content: space-between; gap: 10px; align-items: flex-start; }
+      .cart-item .ci-name { font-weight: 700; line-height: 1.3; }
+      .cart-item .ci-meta { color: var(--faint); font-size: 0.85rem; }
+      .ci-controls { display: flex; align-items: center; gap: 8px; }
+      .qty-btn {
+        width: 38px; height: 38px; border-radius: 9px; border: 1px solid var(--line);
+        background: var(--surface-2); color: var(--text); font-size: 1.15rem; font-weight: 800; line-height: 1;
+      }
+      .qty-val { min-width: 26px; text-align: center; font-weight: 800; }
+      .remove-btn {
+        margin-left: auto; border: 1px solid var(--line); background: transparent; color: var(--muted);
+        border-radius: 9px; padding: 8px 12px; font-weight: 700; font-size: 0.88rem; min-height: 38px;
+        display: inline-flex; align-items: center; gap: 6px;
+      }
+      .remove-btn:hover { color: #ff7a6b; border-color: #ff7a6b; }
+      .drawer-foot { border-top: 1px solid var(--line-soft); padding: 16px 20px 20px; background: var(--surface); }
+      .drawer-foot p { margin: 0 0 12px; color: var(--muted); font-size: 0.93rem; }
+      .drawer-foot .btn { width: 100%; justify-content: center; }
+      .drawer-foot .call-link { display: block; text-align: center; margin-top: 10px; font-weight: 700; color: var(--accent); text-decoration: none; padding: 8px; }
+
+      /* ---------- Toast ---------- */
+      .toast {
+        position: fixed; left: 50%; bottom: 22px; transform: translate(-50%, 80px); z-index: 120;
+        background: var(--text); color: var(--bg); font-weight: 700; font-size: 0.97rem;
+        border-radius: 999px; padding: 12px 20px; box-shadow: var(--shadow);
+        transition: transform 0.3s cubic-bezier(0.32, 0.72, 0.24, 1); pointer-events: none;
+        max-width: 92vw; text-align: center;
+      }
+      .toast.show { transform: translate(-50%, 0); }
+
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        .cart-item.crumpling { animation-duration: 0.01s; }
+        .part-card:hover { transform: none; }
+        .drawer, .scrim, .toast { transition-duration: 0.01s; }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Pull cord: pull down to switch light / dark. Physics swing, built from scratch. -->
+    <div class="cord-zone" aria-hidden="false">
+      <div class="cord-pivot" id="cordPivot">
+        <div class="cord-mount"></div>
+        <div class="cord-line" id="cordLine"></div>
+        <button class="cord-knob" id="cordKnob" type="button" aria-label="Pull to switch light and dark mode" title="Pull me">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.7 1 1.5 1 2.5h6c0-1 .2-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg>
+        </button>
+      </div>
+    </div>
+    <div class="cord-hint" data-i18n="cordHint">Pull the cord</div>
+
+    <header class="site">
+      <div class="wrap header-in">
+        <a class="brand" href="#top" aria-label="Kazi Motors — home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/></svg>
+          </span>
+          <span>
+            <span class="brand-name">Kazi Motors</span>
+            <span class="brand-sub" data-i18n="brandSub">Reconditioned parts · Uttara, Dhaka</span>
+          </span>
+        </a>
+        <nav class="main" aria-label="Main">
+          <a href="#parts" data-i18n="navParts">Parts</a>
+          <a href="#cars" data-i18n="navCars">Cars for sale</a>
+          <a href="#how" data-i18n="navHow">How ordering works</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+        <div class="header-actions">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button type="button" id="langEn" aria-pressed="true">EN</button>
+            <button type="button" id="langBn" aria-pressed="false">বাংলা</button>
+          </div>
+          <button class="cart-btn" id="cartOpen" type="button" aria-haspopup="dialog">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 7h15l-1.7 8.5a2 2 0 0 1-2 1.5H8.6a2 2 0 0 1-2-1.6L4.2 3.9A1 1 0 0 0 3.2 3H1.5"/><circle cx="9" cy="21" r="1.4"/><circle cx="17.5" cy="21" r="1.4"/></svg>
+            <span data-i18n="cartBtn">Enquiry list</span>
+            <span class="cart-count" id="cartCount">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main id="top">
+      <!-- Hero + chassis finder -->
+      <div class="hero">
+        <div class="wrap hero-grid">
+          <div>
+            <h1 data-i18n-html="heroTitle">Japanese reconditioned parts, <span class="hl">checked &amp; honest.</span></h1>
+            <p class="lede" data-i18n="heroLede">Engines, gearboxes, suspension, brakes, electrical and body parts for the Toyotas Dhaka runs on — sourced from Dholaikhal and Japanese imports, checked before dispatch, and priced straight on a call. No fake prices, no fake stock.</p>
+            <div class="hero-ctas">
+              <a class="btn btn-accent" href="#parts" data-i18n="ctaBrowse">Browse parts</a>
+              <a class="btn btn-wa" href="https://wa.me/8801884382430?text=Hello%20Kazi%20Motors%2C%20I%20need%20a%20part%20for%20my%20car." target="_blank" rel="noopener">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.3.8-1.7 1.6-2.4 1.6-.6.1-1.4.2-4.7-1-4-1.6-6.5-5.6-6.7-5.9-.2-.3-1.6-2.1-1.6-4s.9-2.8 1.3-3.2c.4-.4.8-.5 1-.5h.8c.2 0 .6-.1.9.7l1.3 3.1c.1.3.1.6 0 .9l-.6.9-.6.7c-.2.2-.4.4-.2.8.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.4.2.6.1.8-.1l1-1.2c.3-.4.6-.3.9-.2l3 1.4c.4.2.6.3.7.5 0 .1 0 .7-.2 1.2z"/></svg>
+                <span data-i18n="ctaWa">Order on WhatsApp</span>
+              </a>
+              <a class="btn btn-ghost" href="tel:+8801884382430" data-i18n="ctaCall">Call 01884-382430</a>
+            </div>
+            <div class="hero-models">
+              <span class="lbl" data-i18n="modelsLbl">Parts we source for</span>
+              <span class="model-chip">Toyota Axio</span>
+              <span class="model-chip">Premio</span>
+              <span class="model-chip">Allion</span>
+              <span class="model-chip">Noah</span>
+              <span class="model-chip">Corolla</span>
+              <span class="model-chip">Probox</span>
+              <span class="model-chip">Succeed</span>
+              <span class="model-chip">Hiace</span>
+            </div>
+          </div>
+
+          <form class="hero-card" id="chassisForm">
+            <h2 data-i18n="finderTitle">Find a part by chassis number</h2>
+            <p data-i18n="finderText">Give us your chassis number and the part you need — we match the exact part for your car and reply with the price.</p>
+            <label for="fChassis" data-i18n="fChassisLbl">Chassis number</label>
+            <input id="fChassis" name="chassis" type="text" autocomplete="off" placeholder="e.g. NZE161-0123456" />
+            <label for="fModel" data-i18n="fModelLbl">Car model</label>
+            <select id="fModel" name="model">
+              <option value="">—</option>
+              <option>Toyota Axio</option>
+              <option>Toyota Premio</option>
+              <option>Toyota Allion</option>
+              <option>Toyota Noah</option>
+              <option>Toyota Corolla</option>
+              <option>Toyota Probox</option>
+              <option>Toyota Succeed</option>
+              <option>Toyota Hiace</option>
+              <option data-i18n="optOther">Other</option>
+            </select>
+            <label for="fPart" data-i18n="fPartLbl">Part you need</label>
+            <input id="fPart" name="part" type="text" autocomplete="off" data-i18n-ph="fPartPh" placeholder="e.g. AC compressor" />
+            <button class="btn btn-wa" type="submit">
+              <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.3.8-1.7 1.6-2.4 1.6-.6.1-1.4.2-4.7-1-4-1.6-6.5-5.6-6.7-5.9-.2-.3-1.6-2.1-1.6-4s.9-2.8 1.3-3.2c.4-.4.8-.5 1-.5h.8c.2 0 .6-.1.9.7l1.3 3.1c.1.3.1.6 0 .9l-.6.9-.6.7c-.2.2-.4.4-.2.8.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.4.2.6.1.8-.1l1-1.2c.3-.4.6-.3.9-.2l3 1.4c.4.2.6.3.7.5 0 .1 0 .7-.2 1.2z"/></svg>
+              <span data-i18n="finderBtn">Send on WhatsApp</span>
+            </button>
+            <p class="fineprint" data-i18n="finderFine">Opens WhatsApp with your details filled in — nothing is sent until you press send.</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Trust strip -->
+      <div class="trust">
+        <div class="wrap trust-in">
+          <div class="trust-item">
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-3.6 8-10V5l-8-3-8 3v7c0 6.4 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <div><strong data-i18n="trust1T">Checked before dispatch</strong><span data-i18n="trust1D">Every reconditioned part is inspected and tested where it can be, before it leaves.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-8.5 8.5 8.5 8.5 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 8.5-8.5 8.38 8.38 0 0 1 8.5 8.5z"/></svg></span>
+            <div><strong data-i18n="trust2T">Price confirmed first</strong><span data-i18n="trust2D">Reconditioned prices move with supply — we confirm the real price on call or WhatsApp before you pay anything.</span></div>
+          </div>
+          <div class="trust-item">
+            <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><strong data-i18n="trust3T">Uttara Sector 15, Dhaka</strong><span data-i18n="trust3D">Near BRTA / Bridge 2 — visit us, or ask about parcel and home delivery on WhatsApp.</span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Catalogue -->
+      <section class="block" id="parts">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 data-i18n="partsTitle">Parts catalogue</h2>
+            <p data-i18n="partsSub">The parts Dhaka asks us for most. Add what you need to the enquiry list, or order a single part straight on WhatsApp — price confirmed before payment, always.</p>
+          </div>
+          <div class="toolbar">
+            <div class="search-row">
+              <div class="search-box">
+                <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+                <input id="searchInput" type="search" data-i18n-ph="searchPh" placeholder="Search parts — try “gearbox”, “AC”, “হেডলাইট”…" aria-label="Search parts" />
+              </div>
+            </div>
+            <div class="chip-row" id="catChips" role="group" aria-label="Filter by category"></div>
+            <div class="chip-row" id="modelChips" role="group" aria-label="Filter by car model"></div>
+            <div class="result-count" id="resultCount" role="status"></div>
+          </div>
+          <div class="parts-grid" id="partsGrid"></div>
+          <div class="empty-state" id="emptyState" hidden>
+            <strong data-i18n="emptyT">No match in the list — that doesn't mean we can't get it.</strong>
+            <span data-i18n="emptyD">Dholaikhal holds thousands of parts we can't list one by one. Send your chassis number on WhatsApp and we'll hunt it down.</span>
+            <div style="margin-top:14px">
+              <a class="btn btn-wa" href="https://wa.me/8801884382430?text=Hello%20Kazi%20Motors%2C%20I%20am%20looking%20for%20a%20part%20that%20is%20not%20on%20your%20website." target="_blank" rel="noopener" data-i18n="emptyBtn">Ask on WhatsApp</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Cars for sale -->
+      <section class="block" id="cars">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 data-i18n="carsTitle">Cars for sale</h2>
+            <p data-i18n="carsSub">Two Toyota workhorses from our own stock. Come and inspect them in Uttara — bring your own mechanic, run a scanner check, and verify the papers at BRTA. What we know, we tell you straight.</p>
+          </div>
+          <div class="cars-grid">
+            <article class="car-card">
+              <div class="car-photo" aria-hidden="true">
+                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11.5 6.6 5.9A2 2 0 0 1 8.5 4.5h7a2 2 0 0 1 1.9 1.4L19 11.5"/><path d="M3.5 11.5h17a1 1 0 0 1 1 1V17h-2.2M2.5 12.5v-.5a1 1 0 0 1 1-1M2.5 12.5V17h2.2"/><circle cx="7.2" cy="17.2" r="1.9"/><circle cx="16.8" cy="17.2" r="1.9"/><path d="M9.1 17.2h5.8"/></svg>
+              </div>
+              <div class="car-body">
+                <h3>Toyota Succeed</h3>
+                <div class="car-price">৳620,000</div>
+                <ul class="car-specs">
+                  <li><strong data-i18n="specModel">Model year</strong>2003</li>
+                  <li><strong data-i18n="specReg">Registered</strong>2008</li>
+                  <li><strong data-i18n="specEngine">Engine</strong>1500cc · 1NZ</li>
+                  <li><strong data-i18n="specColour">Colour</strong><span data-i18n="white">White</span></li>
+                  <li><strong data-i18n="specPlate">Reg. number</strong>Dhaka Metro-G 25-3843</li>
+                  <li><strong data-i18n="specFitness">Fitness</strong><span data-i18n="fitnessVal">Valid till 10 Mar 2028</span></li>
+                </ul>
+                <p class="car-note" data-i18n="succeedNote">Honest note: the fitness certificate runs to March 2028, but the tax token expired in June 2026 — renewal cost is part of the conversation when you view the car.</p>
+                <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/8801884382430?text=Hello%20Kazi%20Motors%2C%20I%20am%20interested%20in%20the%20Toyota%20Succeed%20(2003%2C%20Dhaka%20Metro-G%2025-3843)%20at%20%E0%A7%B3620%2C000.%20Is%20it%20still%20available%3F" data-i18n="carEnquire">Enquire on WhatsApp</a>
+              </div>
+            </article>
+            <article class="car-card">
+              <div class="car-photo" aria-hidden="true">
+                <svg width="72" height="72" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 11.5 6.6 5.9A2 2 0 0 1 8.5 4.5h7a2 2 0 0 1 1.9 1.4L19 11.5"/><path d="M3.5 11.5h17a1 1 0 0 1 1 1V17h-2.2M2.5 12.5v-.5a1 1 0 0 1 1-1M2.5 12.5V17h2.2"/><circle cx="7.2" cy="17.2" r="1.9"/><circle cx="16.8" cy="17.2" r="1.9"/><path d="M9.1 17.2h5.8"/></svg>
+              </div>
+              <div class="car-body">
+                <h3>Toyota Probox</h3>
+                <div class="car-price">৳655,000</div>
+                <ul class="car-specs">
+                  <li><strong data-i18n="specModel">Model year</strong>2004</li>
+                  <li><strong data-i18n="specReg">Registered</strong>2008</li>
+                  <li><strong data-i18n="specEngine">Engine</strong>1500cc · 1NZ</li>
+                  <li><strong data-i18n="specColour">Colour</strong><span data-i18n="white">White</span></li>
+                  <li><strong data-i18n="specPlate">Reg. number</strong>Dhaka Metro-G 31-1306</li>
+                  <li><strong data-i18n="specLocation">Location</strong><span data-i18n="locVal">Uttara Sector 15</span></li>
+                </ul>
+                <p class="car-note" data-i18n="proboxNote">The dependable Dhaka workhorse — office runs, family trips, light cargo. View it in Uttara Sector 15, in front of BRTA / Bridge 2, and take it for a proper test drive before you decide.</p>
+                <a class="btn btn-wa" target="_blank" rel="noopener" href="https://wa.me/8801884382430?text=Hello%20Kazi%20Motors%2C%20I%20am%20interested%20in%20the%20Toyota%20Probox%20(2004%2C%20Dhaka%20Metro-G%2031-1306)%20at%20%E0%A7%B3655%2C000.%20Is%20it%20still%20available%3F" data-i18n="carEnquire">Enquire on WhatsApp</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- How ordering works -->
+      <section class="block" id="how">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 data-i18n="howTitle">How ordering works</h2>
+          </div>
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <h3 data-i18n="step1T">Tell us the part &amp; your car</h3>
+              <p data-i18n="step1D">Add parts to the enquiry list, or send your chassis number. The chassis number is the surest way to match the exact part for your model and year.</p>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <h3 data-i18n="step2T">We check &amp; confirm the price</h3>
+              <p data-i18n="step2D">We check the part, its condition and the current price, then confirm everything with you on WhatsApp or a call — before any money moves.</p>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <h3 data-i18n="step3T">Collect or get it delivered</h3>
+              <p data-i18n="step3D">Pick up from Uttara Sector 15, or ask about parcel / home delivery when you order. Many Dhaka workshops also arrange fitting — ask us what's nearby.</p>
+            </div>
+          </div>
+          <div class="about-box">
+            <p data-i18n-html="about1"><strong>Sourced the Dhaka way.</strong> Most reconditioned parts in Bangladesh flow through Dholaikhal in Old Dhaka — thousands of specialist shops dealing in everything from nuts and bolts to complete engines, fed by imports through Chattogram port and stock from Japan, Singapore, the UAE and beyond. Many parts for older Toyotas are no longer manufactured at all, which is why this trade keeps Dhaka moving.</p>
+            <p data-i18n="about2">Kazi Motors works that same supply chain, then adds the part most shops skip: a straight answer. If a part is worn, repaired or the wrong match for your chassis, we'd rather tell you than sell it to you.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact -->
+      <section class="block" id="contact">
+        <div class="wrap">
+          <div class="sec-head">
+            <h2 data-i18n="contactTitle">Visit or call</h2>
+            <p data-i18n="contactSub">Run by Kazi Samir. Fastest answer is always a call or a WhatsApp message.</p>
+          </div>
+          <div class="contact-grid">
+            <div class="contact-card">
+              <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.13.96.36 1.9.7 2.8a2 2 0 0 1-.45 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.45c.9.34 1.84.57 2.8.7A2 2 0 0 1 22 16.9z"/></svg></div>
+              <strong data-i18n="cPhone">Phone / WhatsApp</strong>
+              <a href="tel:+8801884382430">01884-382430</a>
+            </div>
+            <div class="contact-card">
+              <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></div>
+              <strong data-i18n="cEmail">Email</strong>
+              <a href="mailto:kzsamir849@gmail.com">kzsamir849@gmail.com</a>
+            </div>
+            <div class="contact-card">
+              <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 12-9 12S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+              <strong data-i18n="cShop">Shop</strong>
+              <span class="val" data-i18n="cShopVal">Uttara Sector 15, Dhaka — near BRTA / Bridge 2</span>
+            </div>
+            <div class="contact-card">
+              <div class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"/></svg></div>
+              <strong data-i18n="cGithub">GitHub</strong>
+              <a href="https://github.com/kzmdsamir" target="_blank" rel="noopener">github.com/kzmdsamir</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <span><strong>Kazi Motors</strong> · <span data-i18n="footTag">Japanese reconditioned car parts — Uttara, Dhaka</span></span>
+        <span data-i18n="footNote">All part prices confirmed on call / WhatsApp before payment.</span>
+      </div>
+    </footer>
+
+    <a class="wa-float" href="https://wa.me/8801884382430?text=Hello%20Kazi%20Motors%2C%20I%20need%20a%20part%20for%20my%20car." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+      <svg width="29" height="29" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.3.8-1.7 1.6-2.4 1.6-.6.1-1.4.2-4.7-1-4-1.6-6.5-5.6-6.7-5.9-.2-.3-1.6-2.1-1.6-4s.9-2.8 1.3-3.2c.4-.4.8-.5 1-.5h.8c.2 0 .6-.1.9.7l1.3 3.1c.1.3.1.6 0 .9l-.6.9-.6.7c-.2.2-.4.4-.2.8.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.4.2.6.1.8-.1l1-1.2c.3-.4.6-.3.9-.2l3 1.4c.4.2.6.3.7.5 0 .1 0 .7-.2 1.2z"/></svg>
+    </a>
+
+    <!-- Cart drawer -->
+    <div class="scrim" id="scrim"></div>
+    <aside class="drawer" id="drawer" role="dialog" aria-modal="true" aria-labelledby="drawerTitle" hidden>
+      <div class="drawer-head">
+        <h2 id="drawerTitle" data-i18n="drawerTitle">Your enquiry list</h2>
+        <button class="icon-btn" id="cartClose" type="button" aria-label="Close">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+      </div>
+      <div class="drawer-items" id="drawerItems"></div>
+      <div class="drawer-foot" id="drawerFoot">
+        <p data-i18n="drawerNote">Prices are confirmed on WhatsApp before you pay — reconditioned prices depend on condition and current stock. Send the list and we'll reply with the total.</p>
+        <button class="btn btn-wa" id="checkoutBtn" type="button">
+          <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.3.8-1.7 1.6-2.4 1.6-.6.1-1.4.2-4.7-1-4-1.6-6.5-5.6-6.7-5.9-.2-.3-1.6-2.1-1.6-4s.9-2.8 1.3-3.2c.4-.4.8-.5 1-.5h.8c.2 0 .6-.1.9.7l1.3 3.1c.1.3.1.6 0 .9l-.6.9-.6.7c-.2.2-.4.4-.2.8.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.4.2.6.1.8-.1l1-1.2c.3-.4.6-.3.9-.2l3 1.4c.4.2.6.3.7.5 0 .1 0 .7-.2 1.2z"/></svg>
+          <span data-i18n="checkoutBtn">Send list on WhatsApp</span>
+        </button>
+        <a class="call-link" href="tel:+8801884382430" data-i18n="drawerCall">or call 01884-382430</a>
+      </div>
+    </aside>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script>
+      "use strict";
+      var WA_NUMBER = "8801884382430";
+      function waLink(text) { return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(text); }
+
+      /* ---------------- Catalogue data ----------------
+         Categories and compatibility follow the Dhaka trade (research report):
+         deepest supply for Axio / Premio / Allion / Noah; Probox & Succeed are
+         the 1500cc 1NZ / NCP51 family. Prices are never listed — always on request. */
+      var CATS = [
+        { id: "all",        en: "All parts",        bn: "সব পার্টস" },
+        { id: "engine",     en: "Engine",           bn: "ইঞ্জিন" },
+        { id: "gearbox",    en: "Gearbox",          bn: "গিয়ারবক্স" },
+        { id: "suspension", en: "Suspension",       bn: "সাসপেনশন" },
+        { id: "steering",   en: "Steering",         bn: "স্টিয়ারিং" },
+        { id: "brakes",     en: "Brakes",           bn: "ব্রেক" },
+        { id: "electrical", en: "Electrical",       bn: "ইলেকট্রিক্যাল" },
+        { id: "ac",         en: "AC & Cooling",     bn: "এসি ও কুলিং" },
+        { id: "body",       en: "Body parts",       bn: "বডি পার্টস" },
+        { id: "lights",     en: "Lights",           bn: "লাইট" },
+        { id: "hybrid",     en: "Hybrid parts",     bn: "হাইব্রিড পার্টস" },
+        { id: "filters",    en: "Filters & service", bn: "ফিল্টার ও সার্ভিস" }
+      ];
+      var MODELS = ["Axio", "Premio", "Allion", "Noah", "Corolla", "Probox", "Succeed", "Hiace"];
+      var ICONS = {
+        engine: '<circle cx="12" cy="12" r="3.2"/><path d="M12 2.8v3M12 18.2v3M2.8 12h3M18.2 12h3M5.5 5.5l2.1 2.1M16.4 16.4l2.1 2.1M18.5 5.5l-2.1 2.1M7.6 16.4l-2.1 2.1"/>',
+        gearbox: '<circle cx="6" cy="6" r="2.4"/><circle cx="18" cy="6" r="2.4"/><circle cx="12" cy="17" r="2.4"/><path d="M8 7.5l2.4 7M16 7.5l-2.4 7M8.4 6h7.2"/>',
+        suspension: '<path d="M12 3v3M12 18v3M7 6h10M7 18h10M8 6c0 2 8 2 8 4s-8 2-8 4 8 2 8 4"/>',
+        steering: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.6"/><path d="M12 9.4V3.5M9.8 13.4 4.6 17M14.2 13.4l5.2 3.6"/>',
+        brakes: '<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.4"/><circle cx="12" cy="6.8" r="1"/><circle cx="16.5" cy="14.8" r="1"/><circle cx="7.5" cy="14.8" r="1"/>',
+        electrical: '<path d="M13 2 4.5 13.5H11L9.8 22 19 10h-6.5L13 2z"/>',
+        ac: '<path d="M12 3v18M12 3l-2.5 2.5M12 3l2.5 2.5M12 21l-2.5-2.5M12 21l2.5-2.5M4.2 7.5l15.6 9M4.2 7.5 4 4.2M4.2 7.5 7.5 7.3M19.8 16.5l.2 3.3M19.8 16.5l-3.3.2M19.8 7.5l-15.6 9M19.8 7.5l.2-3.3M19.8 7.5l-3.3-.2M4.2 16.5l-.2 3.3M4.2 16.5l3.3.2"/>',
+        body: '<path d="M5 11.5 6.6 5.9A2 2 0 0 1 8.5 4.5h7a2 2 0 0 1 1.9 1.4L19 11.5"/><path d="M3.5 11.5h17a1 1 0 0 1 1 1V17h-2.2M2.5 12.5V17h2.2"/><circle cx="7.2" cy="17.2" r="1.9"/><circle cx="16.8" cy="17.2" r="1.9"/><path d="M9.1 17.2h5.8"/>',
+        lights: '<path d="M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.8.7 1 1.5 1 2.5h6c0-1 .2-1.8 1-2.5A6 6 0 0 0 12 3z"/>',
+        hybrid: '<path d="M11 20A7 7 0 0 1 4 13c0-4 3-8 8-10 3.5 2.5 6 6 6 9.5A6.5 6.5 0 0 1 11 20z"/><path d="M12 21c0-5 1.5-8 4-10.5"/>',
+        filters: '<path d="M4 5h16l-6.2 7.2V19l-3.6-2v-4.8L4 5z"/>'
+      };
+      var PARTS = [
+        { id: "eng-1nz",   cat: "engine",     en: "Complete engine — 1NZ-FE 1500cc", bn: "সম্পূর্ণ ইঞ্জিন — 1NZ-FE ১৫০০সিসি", fits: ["Axio", "Premio", "Allion", "Corolla", "Probox", "Succeed"] },
+        { id: "eng-head",  cat: "engine",     en: "Cylinder head block", bn: "সিলিন্ডার হেড ব্লক", fits: ["Axio", "Premio", "Allion"] },
+        { id: "eng-throttle", cat: "engine",  en: "Throttle body", bn: "থ্রটল বডি", fits: ["Axio", "Premio", "Allion", "Probox", "Succeed"] },
+        { id: "eng-fuelpump", cat: "engine",  en: "Fuel pump", bn: "ফুয়েল পাম্প", fits: ["Axio", "Premio", "Allion", "Noah", "Probox", "Succeed"] },
+        { id: "gb-auto",   cat: "gearbox",    en: "Automatic gearbox / transmission", bn: "অটো গিয়ারবক্স / ট্রান্সমিশন", fits: ["Axio", "Premio", "Allion", "Noah"] },
+        { id: "susp-shock", cat: "suspension", en: "Shock absorbers (front & rear)", bn: "শক অ্যাবজর্বার (সামনে ও পেছনে)", fits: ["Axio", "Premio", "Allion", "Noah", "Probox", "Succeed"] },
+        { id: "susp-arm",  cat: "suspension", en: "Lower control arm", bn: "লোয়ার কন্ট্রোল আর্ম", fits: ["Axio", "Premio", "Allion", "Corolla"] },
+        { id: "susp-cv",   cat: "suspension", en: "CV joint & drive shaft", bn: "সিভি জয়েন্ট ও ড্রাইভ শ্যাফট", fits: ["Axio", "Premio", "Allion", "Probox", "Succeed"] },
+        { id: "str-rack",  cat: "steering",   en: "Steering rack", bn: "স্টিয়ারিং র‍্যাক", fits: ["Axio", "Premio", "Allion", "Noah"] },
+        { id: "str-motor", cat: "steering",   en: "Steering motor (EPS)", bn: "স্টিয়ারিং মোটর (EPS)", fits: ["Axio", "Premio", "Allion"] },
+        { id: "brk-disc",  cat: "brakes",     en: "Brake discs & pads", bn: "ব্রেক ডিস্ক ও প্যাড", fits: ["Axio", "Premio", "Allion", "Noah", "Corolla", "Probox", "Succeed", "Hiace"] },
+        { id: "brk-booster", cat: "brakes",   en: "Brake booster", bn: "ব্রেক বুস্টার", fits: ["Axio", "Premio", "Allion", "Noah"] },
+        { id: "brk-abs",   cat: "brakes",     en: "ABS module", bn: "এবিএস মডিউল", fits: ["Axio", "Premio", "Allion", "Noah"] },
+        { id: "ele-ecu",   cat: "electrical", en: "ECU / computer box", bn: "ইসিইউ / কম্পিউটার বক্স", fits: ["Axio", "Premio", "Allion", "Probox", "Succeed"] },
+        { id: "ele-alt",   cat: "electrical", en: "Alternator", bn: "অল্টারনেটর", fits: ["Axio", "Premio", "Allion", "Noah", "Probox", "Succeed"] },
+        { id: "ele-starter", cat: "electrical", en: "Starter motor", bn: "স্টার্টার মোটর", fits: ["Axio", "Premio", "Allion", "Probox", "Succeed", "Hiace"] },
+        { id: "ele-coil",  cat: "electrical", en: "Ignition coils", bn: "ইগনিশন কয়েল", fits: ["Axio", "Premio", "Allion", "Corolla", "Probox", "Succeed"] },
+        { id: "ele-o2",    cat: "electrical", en: "Oxygen sensor", bn: "অক্সিজেন সেন্সর", fits: ["Axio", "Premio", "Allion", "Noah"] },
+        { id: "ele-fuse",  cat: "electrical", en: "Fuse box", bn: "ফিউজ বক্স", fits: ["Axio", "Premio", "Allion", "Probox", "Succeed"] },
+        { id: "ac-comp",   cat: "ac",         en: "AC compressor", bn: "এসি কম্প্রেসর", fits: ["Axio", "Premio", "Allion", "Noah", "Probox", "Succeed", "Hiace"] },
+        { id: "ac-rad",    cat: "ac",         en: "Radiator", bn: "রেডিয়েটর", fits: ["Axio", "Premio", "Allion", "Noah", "Corolla", "Probox", "Succeed"] },
+        { id: "ac-fan",    cat: "ac",         en: "Radiator fan motor", bn: "রেডিয়েটর ফ্যান মোটর", fits: ["Axio", "Premio", "Allion", "Noah"] },
+        { id: "ac-pump",   cat: "ac",         en: "Water pump", bn: "ওয়াটার পাম্প", fits: ["Axio", "Premio", "Allion", "Probox", "Succeed"] },
+        { id: "body-bumper", cat: "body",     en: "Front bumper", bn: "সামনের বাম্পার", fits: ["Axio", "Premio", "Allion", "Noah", "Probox", "Succeed"] },
+        { id: "body-mirror", cat: "body",     en: "Side mirror", bn: "সাইড মিরর", fits: ["Axio", "Premio", "Allion", "Noah", "Corolla", "Probox", "Succeed"] },
+        { id: "body-window", cat: "body",     en: "Door window motor & regulator", bn: "জানালার মোটর ও রেগুলেটর", fits: ["Axio", "Premio", "Allion", "Noah"] },
+        { id: "lt-head",   cat: "lights",     en: "Headlights", bn: "হেডলাইট", fits: ["Axio", "Premio", "Allion", "Noah", "Corolla", "Probox", "Succeed", "Hiace"] },
+        { id: "lt-tail",   cat: "lights",     en: "Tail lights", bn: "টেইল লাইট", fits: ["Axio", "Premio", "Allion", "Noah", "Probox", "Succeed"] },
+        { id: "hyb-batt",  cat: "hybrid",     en: "Hybrid battery pack", bn: "হাইব্রিড ব্যাটারি প্যাক", fits: ["Axio", "Noah"] },
+        { id: "hyb-pump",  cat: "hybrid",     en: "Hybrid water pump", bn: "হাইব্রিড ওয়াটার পাম্প", fits: ["Axio", "Noah"] },
+        { id: "flt-air",   cat: "filters",    en: "Air filter", bn: "এয়ার ফিল্টার", fits: ["Axio", "Premio", "Allion", "Noah", "Corolla", "Probox", "Succeed", "Hiace"] },
+        { id: "flt-oil",   cat: "filters",    en: "Oil filter", bn: "অয়েল ফিল্টার", fits: ["Axio", "Premio", "Allion", "Noah", "Corolla", "Probox", "Succeed", "Hiace"] }
+      ];
+      function catName(id) {
+        for (var i = 0; i < CATS.length; i++) if (CATS[i].id === id) return CATS[i];
+        return CATS[0];
+      }
+      function partById(id) {
+        for (var i = 0; i < PARTS.length; i++) if (PARTS[i].id === id) return PARTS[i];
+        return null;
+      }
+
+      /* ---------------- i18n ---------------- */
+      var STR = {
+        en: {
+          cordHint: "Pull the cord",
+          brandSub: "Reconditioned parts · Uttara, Dhaka",
+          navParts: "Parts", navCars: "Cars for sale", navHow: "How ordering works", navContact: "Contact",
+          cartBtn: "Enquiry list",
+          heroTitle: 'Japanese reconditioned parts, <span class="hl">checked &amp; honest.</span>',
+          heroLede: "Engines, gearboxes, suspension, brakes, electrical and body parts for the Toyotas Dhaka runs on — sourced from Dholaikhal and Japanese imports, checked before dispatch, and priced straight on a call. No fake prices, no fake stock.",
+          ctaBrowse: "Browse parts", ctaWa: "Order on WhatsApp", ctaCall: "Call 01884-382430",
+          modelsLbl: "Parts we source for",
+          finderTitle: "Find a part by chassis number",
+          finderText: "Give us your chassis number and the part you need — we match the exact part for your car and reply with the price.",
+          fChassisLbl: "Chassis number", fModelLbl: "Car model", fPartLbl: "Part you need", fPartPh: "e.g. AC compressor",
+          optOther: "Other", finderBtn: "Send on WhatsApp",
+          finderFine: "Opens WhatsApp with your details filled in — nothing is sent until you press send.",
+          trust1T: "Checked before dispatch", trust1D: "Every reconditioned part is inspected and tested where it can be, before it leaves.",
+          trust2T: "Price confirmed first", trust2D: "Reconditioned prices move with supply — we confirm the real price on call or WhatsApp before you pay anything.",
+          trust3T: "Uttara Sector 15, Dhaka", trust3D: "Near BRTA / Bridge 2 — visit us, or ask about parcel and home delivery on WhatsApp.",
+          partsTitle: "Parts catalogue",
+          partsSub: "The parts Dhaka asks us for most. Add what you need to the enquiry list, or order a single part straight on WhatsApp — price confirmed before payment, always.",
+          searchPh: "Search parts — try “gearbox”, “AC”, “হেডলাইট”…",
+          emptyT: "No match in the list — that doesn't mean we can't get it.",
+          emptyD: "Dholaikhal holds thousands of parts we can't list one by one. Send your chassis number on WhatsApp and we'll hunt it down.",
+          emptyBtn: "Ask on WhatsApp",
+          carsTitle: "Cars for sale",
+          carsSub: "Two Toyota workhorses from our own stock. Come and inspect them in Uttara — bring your own mechanic, run a scanner check, and verify the papers at BRTA. What we know, we tell you straight.",
+          specModel: "Model year", specReg: "Registered", specEngine: "Engine", specColour: "Colour", specPlate: "Reg. number",
+          specFitness: "Fitness", specLocation: "Location", white: "White", fitnessVal: "Valid till 10 Mar 2028", locVal: "Uttara Sector 15",
+          succeedNote: "Honest note: the fitness certificate runs to March 2028, but the tax token expired in June 2026 — renewal cost is part of the conversation when you view the car.",
+          proboxNote: "The dependable Dhaka workhorse — office runs, family trips, light cargo. View it in Uttara Sector 15, in front of BRTA / Bridge 2, and take it for a proper test drive before you decide.",
+          carEnquire: "Enquire on WhatsApp",
+          howTitle: "How ordering works",
+          step1T: "Tell us the part & your car", step1D: "Add parts to the enquiry list, or send your chassis number. The chassis number is the surest way to match the exact part for your model and year.",
+          step2T: "We check & confirm the price", step2D: "We check the part, its condition and the current price, then confirm everything with you on WhatsApp or a call — before any money moves.",
+          step3T: "Collect or get it delivered", step3D: "Pick up from Uttara Sector 15, or ask about parcel / home delivery when you order. Many Dhaka workshops also arrange fitting — ask us what's nearby.",
+          about1: "<strong>Sourced the Dhaka way.</strong> Most reconditioned parts in Bangladesh flow through Dholaikhal in Old Dhaka — thousands of specialist shops dealing in everything from nuts and bolts to complete engines, fed by imports through Chattogram port and stock from Japan, Singapore, the UAE and beyond. Many parts for older Toyotas are no longer manufactured at all, which is why this trade keeps Dhaka moving.",
+          about2: "Kazi Motors works that same supply chain, then adds the part most shops skip: a straight answer. If a part is worn, repaired or the wrong match for your chassis, we'd rather tell you than sell it to you.",
+          contactTitle: "Visit or call", contactSub: "Run by Kazi Samir. Fastest answer is always a call or a WhatsApp message.",
+          cPhone: "Phone / WhatsApp", cEmail: "Email", cShop: "Shop", cShopVal: "Uttara Sector 15, Dhaka — near BRTA / Bridge 2", cGithub: "GitHub",
+          footTag: "Japanese reconditioned car parts — Uttara, Dhaka",
+          footNote: "All part prices confirmed on call / WhatsApp before payment.",
+          drawerTitle: "Your enquiry list",
+          drawerNote: "Prices are confirmed on WhatsApp before you pay — reconditioned prices depend on condition and current stock. Send the list and we'll reply with the total.",
+          checkoutBtn: "Send list on WhatsApp", drawerCall: "or call 01884-382430",
+          priceOnRequest: "Price on request",
+          addBtn: "Add to list",
+          fitsLbl: "Fits:",
+          catLbl: "Category", modelLbl: "Model",
+          showing: function (n, total) { return "Showing " + n + " of " + total + " parts"; },
+          addedToast: function (name) { return "Added: " + name; },
+          drawerEmpty: "Your enquiry list is empty.<br/>Add parts from the catalogue and send them all in one WhatsApp message.",
+          removeBtn: "Remove",
+          checkoutMsgHead: "Hello Kazi Motors, please check availability and price for these parts:",
+          finderMsg: function (c, m, p) { return "Hello Kazi Motors, I need a part.\nChassis number: " + (c || "—") + "\nCar model: " + (m || "—") + "\nPart needed: " + (p || "—") + "\nPlease confirm availability and price."; },
+          partMsg: function (name, cat, fits) { return "Hello Kazi Motors, I need this part:\n" + name + " (" + cat + ")\nFits: " + fits + "\nPlease confirm availability and price."; }
+        },
+        bn: {
+          cordHint: "দড়ি টানুন",
+          brandSub: "রিকন্ডিশন্ড পার্টস · উত্তরা, ঢাকা",
+          navParts: "পার্টস", navCars: "বিক্রির গাড়ি", navHow: "অর্ডার যেভাবে কাজ করে", navContact: "যোগাযোগ",
+          cartBtn: "তালিকা",
+          heroTitle: 'জাপানি রিকন্ডিশন্ড পার্টস, <span class="hl">যাচাই করা ও সৎ দামে।</span>',
+          heroLede: "ঢাকার রাস্তায় চলা টয়োটা গাড়ির জন্য ইঞ্জিন, গিয়ারবক্স, সাসপেনশন, ব্রেক, ইলেকট্রিক্যাল ও বডি পার্টস — ঢোলাইখাল ও জাপানি আমদানি থেকে সংগ্রহ, পাঠানোর আগে যাচাই করা, আর দাম সরাসরি ফোনে। ভুয়া দাম নেই, ভুয়া স্টক নেই।",
+          ctaBrowse: "পার্টস দেখুন", ctaWa: "WhatsApp-এ অর্ডার করুন", ctaCall: "কল করুন 01884-382430",
+          modelsLbl: "যেসব মডেলের পার্টস সংগ্রহ করি",
+          finderTitle: "চেসিস নম্বর দিয়ে পার্টস খুঁজুন",
+          finderText: "আপনার চেসিস নম্বর আর প্রয়োজনীয় পার্টসটি জানান — আমরা আপনার গাড়ির জন্য ঠিক পার্টসটি মিলিয়ে দামসহ উত্তর দেব।",
+          fChassisLbl: "চেসিস নম্বর", fModelLbl: "গাড়ির মডেল", fPartLbl: "যে পার্টসটি লাগবে", fPartPh: "যেমন: এসি কম্প্রেসর",
+          optOther: "অন্যান্য", finderBtn: "WhatsApp-এ পাঠান",
+          finderFine: "WhatsApp খুলবে আপনার তথ্য লিখে দেওয়া অবস্থায় — পাঠানোর বোতাম না চাপলে কিছুই যাবে না।",
+          trust1T: "পাঠানোর আগে যাচাই", trust1D: "প্রতিটি রিকন্ডিশন্ড পার্টস পাঠানোর আগে পরীক্ষা করা হয়, যেখানে সম্ভব টেস্টও করা হয়।",
+          trust2T: "আগে দাম নিশ্চিত করুন", trust2D: "রিকন্ডিশন্ড পার্টসের দাম সরবরাহ অনুযায়ী ওঠানামা করে — টাকা দেওয়ার আগে আমরা কল বা WhatsApp-এ আসল দাম নিশ্চিত করি।",
+          trust3T: "উত্তরা সেক্টর ১৫, ঢাকা", trust3D: "BRTA / ব্রিজ ২-এর কাছে — দোকানে আসুন, অথবা WhatsApp-এ পার্সেল ও হোম ডেলিভারি সম্পর্কে জানুন।",
+          partsTitle: "পার্টস ক্যাটালগ",
+          partsSub: "ঢাকায় সবচেয়ে বেশি চাওয়া পার্টসগুলো। যা লাগবে তালিকায় যোগ করুন, অথবা একটিমাত্র পার্টস সরাসরি WhatsApp-এ অর্ডার করুন — টাকা দেওয়ার আগে দাম নিশ্চিত, সবসময়।",
+          searchPh: "পার্টস খুঁজুন — যেমন “gearbox”, “AC”, “হেডলাইট”…",
+          emptyT: "তালিকায় মিলল না — তার মানে এই নয় যে পাওয়া যাবে না।",
+          emptyD: "ঢোলাইখালে হাজার হাজার পার্টস আছে, সব একে একে তালিকায় তোলা যায় না। WhatsApp-এ চেসিস নম্বর পাঠান, আমরা খুঁজে বের করব।",
+          emptyBtn: "WhatsApp-এ জিজ্ঞেস করুন",
+          carsTitle: "বিক্রির গাড়ি",
+          carsSub: "আমাদের নিজের স্টকের দুটি টয়োটা ওয়ার্কহর্স। উত্তরায় এসে নিজে দেখুন — নিজের মেকানিক আনুন, স্ক্যানার চেক করুন, BRTA-তে কাগজ যাচাই করুন। যা জানি, সোজাসাপ্টা বলি।",
+          specModel: "মডেল ইয়ার", specReg: "রেজিস্ট্রেশন", specEngine: "ইঞ্জিন", specColour: "রং", specPlate: "রেজি. নম্বর",
+          specFitness: "ফিটনেস", specLocation: "লোকেশন", white: "সাদা", fitnessVal: "১০ মার্চ ২০২৮ পর্যন্ত বৈধ", locVal: "উত্তরা সেক্টর ১৫",
+          succeedNote: "সৎ নোট: ফিটনেস সার্টিফিকেট ২০২৮ সালের মার্চ পর্যন্ত আছে, কিন্তু ট্যাক্স টোকেনের মেয়াদ শেষ হয়েছে ২০২৬ সালের জুনে — গাড়ি দেখতে এলে নবায়নের খরচ নিয়ে কথা হবে।",
+          proboxNote: "ঢাকার নির্ভরযোগ্য ওয়ার্কহর্স — অফিসের কাজ, পরিবারের যাতায়াত, হালকা মালামাল। উত্তরা সেক্টর ১৫-এ, BRTA / ব্রিজ ২-এর সামনে এসে দেখুন, সিদ্ধান্তের আগে ভালো করে টেস্ট ড্রাইভ দিন।",
+          carEnquire: "WhatsApp-এ খোঁজ নিন",
+          howTitle: "অর্ডার যেভাবে কাজ করে",
+          step1T: "পার্টস ও গাড়ির কথা জানান", step1D: "পার্টস তালিকায় যোগ করুন, অথবা চেসিস নম্বর পাঠান। আপনার মডেল ও ইয়ারের জন্য ঠিক পার্টস মেলানোর সবচেয়ে নির্ভরযোগ্য উপায় চেসিস নম্বর।",
+          step2T: "আমরা যাচাই করে দাম জানাই", step2D: "পার্টস, তার অবস্থা ও বর্তমান দাম যাচাই করে WhatsApp বা কলে সব নিশ্চিত করি — কোনো টাকা নড়ার আগে।",
+          step3T: "এসে নিন বা ডেলিভারি নিন", step3D: "উত্তরা সেক্টর ১৫ থেকে এসে নিন, অথবা অর্ডারের সময় পার্সেল / হোম ডেলিভারি সম্পর্কে জেনে নিন। ঢাকার অনেক ওয়ার্কশপ ফিটিংয়ের ব্যবস্থাও করে — কাছাকাছি কী আছে জানতে চান।",
+          about1: "<strong>ঢাকার নিজের পদ্ধতিতে সংগ্রহ।</strong> বাংলাদেশের বেশিরভাগ রিকন্ডিশন্ড পার্টস আসে পুরান ঢাকার ঢোলাইখাল দিয়ে — নাট-বল্টু থেকে সম্পূর্ণ ইঞ্জিন পর্যন্ত সবকিছুতে বিশেষজ্ঞ হাজার হাজার দোকান, যাদের সরবরাহ আসে চট্টগ্রাম বন্দর দিয়ে এবং জাপান, সিঙ্গাপুর, UAE-সহ নানা দেশ থেকে। পুরনো টয়োটার অনেক পার্টস এখন আর তৈরিই হয় না — এই ব্যবসাই ঢাকাকে চলমান রেখেছে।",
+          about2: "Kazi Motors একই সরবরাহ-শৃঙ্খলে কাজ করে, তার সঙ্গে যোগ করে যেটা বেশিরভাগ দোকান করে না: সোজা উত্তর। পার্টস জীর্ণ, মেরামত করা বা আপনার চেসিসের সঙ্গে না মিললে, বিক্রির চেয়ে আমরা বলতেই পছন্দ করি।",
+          contactTitle: "আসুন বা কল করুন", contactSub: "পরিচালনায় Kazi Samir। সবচেয়ে দ্রুত উত্তর মিলবে কল বা WhatsApp মেসেজে।",
+          cPhone: "ফোন / WhatsApp", cEmail: "ইমেইল", cShop: "দোকান", cShopVal: "উত্তরা সেক্টর ১৫, ঢাকা — BRTA / ব্রিজ ২-এর কাছে", cGithub: "GitHub",
+          footTag: "জাপানি রিকন্ডিশন্ড গাড়ির পার্টস — উত্তরা, ঢাকা",
+          footNote: "সব পার্টসের দাম টাকা দেওয়ার আগে কল / WhatsApp-এ নিশ্চিত করা হয়।",
+          drawerTitle: "আপনার তালিকা",
+          drawerNote: "দাম WhatsApp-এ নিশ্চিত করার পরই টাকা দেবেন — রিকন্ডিশন্ড পার্টসের দাম অবস্থা ও বর্তমান স্টকের ওপর নির্ভর করে। তালিকা পাঠান, আমরা মোট দাম জানিয়ে দেব।",
+          checkoutBtn: "তালিকা WhatsApp-এ পাঠান", drawerCall: "অথবা কল করুন 01884-382430",
+          priceOnRequest: "দাম জানতে কল / WhatsApp করুন",
+          addBtn: "তালিকায় যোগ করুন",
+          fitsLbl: "যেসব গাড়িতে লাগে:",
+          catLbl: "ক্যাটাগরি", modelLbl: "মডেল",
+          showing: function (n, total) { return total + "টি পার্টসের মধ্যে " + n + "টি দেখাচ্ছে"; },
+          addedToast: function (name) { return "যোগ হয়েছে: " + name; },
+          drawerEmpty: "আপনার তালিকা খালি।<br/>ক্যাটালগ থেকে পার্টস যোগ করুন — সব একসঙ্গে এক WhatsApp মেসেজে পাঠাতে পারবেন।",
+          removeBtn: "বাদ দিন",
+          checkoutMsgHead: "আসসালামু আলাইকুম Kazi Motors, এই পার্টসগুলোর প্রাপ্যতা ও দাম জানাবেন:",
+          finderMsg: function (c, m, p) { return "আসসালামু আলাইকুম Kazi Motors, আমার একটি পার্টস লাগবে।\nচেসিস নম্বর: " + (c || "—") + "\nগাড়ির মডেল: " + (m || "—") + "\nযে পার্টস লাগবে: " + (p || "—") + "\nপ্রাপ্যতা ও দাম জানাবেন।"; },
+          partMsg: function (name, cat, fits) { return "আসসালামু আলাইকুম Kazi Motors, আমার এই পার্টসটি লাগবে:\n" + name + " (" + cat + ")\nযেসব গাড়িতে লাগে: " + fits + "\nপ্রাপ্যতা ও দাম জানাবেন।"; }
+        }
+      };
+      var lang = "en";
+      function t() { return STR[lang]; }
+
+      /* ---------------- State ---------------- */
+      var activeCat = "all";
+      var activeModel = "all";
+      var query = "";
+      var cart = {}; // id -> qty
+
+      /* ---------------- Rendering: chips ---------------- */
+      var catChips = document.getElementById("catChips");
+      var modelChips = document.getElementById("modelChips");
+      function renderChips() {
+        catChips.innerHTML = "";
+        var lbl = document.createElement("span"); lbl.className = "chip-lbl"; lbl.textContent = t().catLbl; catChips.appendChild(lbl);
+        CATS.forEach(function (c) {
+          var b = document.createElement("button");
+          b.type = "button"; b.className = "chip"; b.textContent = lang === "bn" ? c.bn : c.en;
+          b.setAttribute("aria-pressed", activeCat === c.id ? "true" : "false");
+          b.addEventListener("click", function () { activeCat = c.id; renderChips(); renderParts(); });
+          catChips.appendChild(b);
+        });
+        modelChips.innerHTML = "";
+        var lbl2 = document.createElement("span"); lbl2.className = "chip-lbl"; lbl2.textContent = t().modelLbl; modelChips.appendChild(lbl2);
+        var allB = document.createElement("button");
+        allB.type = "button"; allB.className = "chip"; allB.textContent = lang === "bn" ? "সব মডেল" : "All models";
+        allB.setAttribute("aria-pressed", activeModel === "all" ? "true" : "false");
+        allB.addEventListener("click", function () { activeModel = "all"; renderChips(); renderParts(); });
+        modelChips.appendChild(allB);
+        MODELS.forEach(function (m) {
+          var b = document.createElement("button");
+          b.type = "button"; b.className = "chip"; b.textContent = m;
+          b.setAttribute("aria-pressed", activeModel === m ? "true" : "false");
+          b.addEventListener("click", function () { activeModel = (activeModel === m) ? "all" : m; renderChips(); renderParts(); });
+          modelChips.appendChild(b);
+        });
+      }
+
+      /* ---------------- Rendering: parts grid ---------------- */
+      var grid = document.getElementById("partsGrid");
+      var emptyState = document.getElementById("emptyState");
+      var resultCount = document.getElementById("resultCount");
+      function iconSvg(cat) {
+        return '<svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + (ICONS[cat] || ICONS.engine) + "</svg>";
+      }
+      function matches(p) {
+        if (activeCat !== "all" && p.cat !== activeCat) return false;
+        if (activeModel !== "all" && p.fits.indexOf(activeModel) === -1) return false;
+        if (query) {
+          var hay = (p.en + " " + p.bn + " " + catName(p.cat).en + " " + catName(p.cat).bn + " " + p.fits.join(" ")).toLowerCase();
+          if (hay.indexOf(query.toLowerCase()) === -1) return false;
+        }
+        return true;
+      }
+      function renderParts() {
+        grid.innerHTML = "";
+        var shown = 0;
+        PARTS.forEach(function (p) {
+          if (!matches(p)) return;
+          shown++;
+          var card = document.createElement("article");
+          card.className = "part-card";
+          var name = lang === "bn" ? p.bn : p.en;
+          var altName = lang === "bn" ? p.en : p.bn;
+          var cat = catName(p.cat);
+          var fitsHtml = p.fits.map(function (f) { return "<span>" + f + "</span>"; }).join("");
+          card.innerHTML =
+            '<div class="part-top"><span class="part-ic">' + iconSvg(p.cat) + '</span>' +
+            '<span class="part-cat">' + (lang === "bn" ? cat.bn : cat.en) + "</span></div>" +
+            "<h3>" + name + '</h3><div class="part-bn">' + altName + "</div>" +
+            '<div class="fits" aria-label="' + t().fitsLbl + '">' + fitsHtml + "</div>" +
+            '<div class="price-line"><span aria-hidden="true" style="font-size:1.05em;line-height:1">৳</span>' + t().priceOnRequest + "</div>" +
+            '<div class="part-actions">' +
+              '<button type="button" class="add-btn" data-add="' + p.id + '">' +
+                '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>' + t().addBtn +
+              "</button>" +
+              '<a class="wa-btn" target="_blank" rel="noopener" aria-label="WhatsApp — ' + name + '" href="' +
+                waLink(t().partMsg(p.en, catName(p.cat).en, p.fits.join(", "))) + '">' +
+                '<svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.2 14.2c-.3.8-1.7 1.6-2.4 1.6-.6.1-1.4.2-4.7-1-4-1.6-6.5-5.6-6.7-5.9-.2-.3-1.6-2.1-1.6-4s.9-2.8 1.3-3.2c.4-.4.8-.5 1-.5h.8c.2 0 .6-.1.9.7l1.3 3.1c.1.3.1.6 0 .9l-.6.9-.6.7c-.2.2-.4.4-.2.8.2.4.9 1.5 2 2.4 1.4 1.2 2.5 1.6 2.9 1.7.4.2.6.1.8-.1l1-1.2c.3-.4.6-.3.9-.2l3 1.4c.4.2.6.3.7.5 0 .1 0 .7-.2 1.2z"/></svg>' +
+              "</a></div>";
+          grid.appendChild(card);
+        });
+        resultCount.textContent = t().showing(shown, PARTS.length);
+        emptyState.hidden = shown !== 0;
+        grid.hidden = shown === 0;
+      }
+      grid.addEventListener("click", function (e) {
+        var btn = e.target.closest("[data-add]");
+        if (!btn) return;
+        addToCart(btn.getAttribute("data-add"));
+      });
+      document.getElementById("searchInput").addEventListener("input", function (e) {
+        query = e.target.value.trim();
+        renderParts();
+      });
+
+      /* ---------------- Cart ---------------- */
+      var cartCountEl = document.getElementById("cartCount");
+      var drawer = document.getElementById("drawer");
+      var scrim = document.getElementById("scrim");
+      var drawerItems = document.getElementById("drawerItems");
+      var drawerFoot = document.getElementById("drawerFoot");
+      var toastEl = document.getElementById("toast");
+      var toastTimer = null;
+      function showToast(msg) {
+        toastEl.textContent = msg;
+        toastEl.classList.add("show");
+        if (toastTimer) clearTimeout(toastTimer);
+        toastTimer = setTimeout(function () { toastEl.classList.remove("show"); }, 2400);
+      }
+      function cartTotalQty() {
+        var n = 0; for (var k in cart) n += cart[k];
+        return n;
+      }
+      function addToCart(id) {
+        cart[id] = (cart[id] || 0) + 1;
+        syncCartUI();
+        var p = partById(id);
+        showToast(t().addedToast(lang === "bn" ? p.bn : p.en));
+      }
+      function renderCartItems() {
+        drawerItems.innerHTML = "";
+        var ids = Object.keys(cart);
+        if (!ids.length) {
+          drawerItems.innerHTML = '<div class="drawer-empty">' + t().drawerEmpty + "</div>";
+          drawerFoot.style.display = "none";
+          return;
+        }
+        drawerFoot.style.display = "";
+        ids.forEach(function (id) {
+          var p = partById(id);
+          if (!p) return;
+          var item = document.createElement("div");
+          item.className = "cart-item";
+          item.setAttribute("data-item", id);
+          item.innerHTML =
+            '<div class="ci-top"><div><div class="ci-name">' + (lang === "bn" ? p.bn : p.en) + '</div>' +
+            '<div class="ci-meta">' + (lang === "bn" ? catName(p.cat).bn : catName(p.cat).en) + " · " + t().priceOnRequest + "</div></div></div>" +
+            '<div class="ci-controls">' +
+              '<button type="button" class="qty-btn" data-dec="' + id + '" aria-label="Decrease quantity">−</button>' +
+              '<span class="qty-val">' + cart[id] + "</span>" +
+              '<button type="button" class="qty-btn" data-inc="' + id + '" aria-label="Increase quantity">+</button>' +
+              '<button type="button" class="remove-btn" data-remove="' + id + '">' +
+                '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M9 7V4h6v3M6 7l1 13a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1l1-13"/></svg>' +
+                t().removeBtn + "</button></div>";
+          drawerItems.appendChild(item);
+        });
+      }
+      function syncCartUI() {
+        cartCountEl.textContent = cartTotalQty();
+        renderCartItems();
+      }
+      drawerItems.addEventListener("click", function (e) {
+        var inc = e.target.closest("[data-inc]");
+        var dec = e.target.closest("[data-dec]");
+        var rem = e.target.closest("[data-remove]");
+        if (inc) { cart[inc.getAttribute("data-inc")]++; syncCartUI(); return; }
+        if (dec) {
+          var id = dec.getAttribute("data-dec");
+          cart[id]--;
+          if (cart[id] <= 0) delete cart[id];
+          syncCartUI(); return;
+        }
+        if (rem) {
+          var rid = rem.getAttribute("data-remove");
+          var el = drawerItems.querySelector('[data-item="' + rid + '"]');
+          if (el && !window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+            el.classList.add("crumpling");
+            setTimeout(function () { delete cart[rid]; syncCartUI(); }, 470);
+          } else {
+            delete cart[rid]; syncCartUI();
+          }
+        }
+      });
+      function openDrawer() {
+        drawer.hidden = false;
+        requestAnimationFrame(function () {
+          drawer.classList.add("open"); scrim.classList.add("open");
+        });
+      }
+      function closeDrawer() {
+        drawer.classList.remove("open"); scrim.classList.remove("open");
+        setTimeout(function () { drawer.hidden = true; }, 320);
+      }
+      document.getElementById("cartOpen").addEventListener("click", openDrawer);
+      document.getElementById("cartClose").addEventListener("click", closeDrawer);
+      scrim.addEventListener("click", closeDrawer);
+      document.addEventListener("keydown", function (e) { if (e.key === "Escape" && !drawer.hidden) closeDrawer(); });
+      document.getElementById("checkoutBtn").addEventListener("click", function () {
+        var ids = Object.keys(cart);
+        if (!ids.length) return;
+        var lines = [t().checkoutMsgHead, ""];
+        ids.forEach(function (id, i) {
+          var p = partById(id);
+          lines.push((i + 1) + ". " + p.en + " — x" + cart[id] + " (fits: " + p.fits.join(", ") + ")");
+        });
+        window.open(waLink(lines.join("\n")), "_blank", "noopener");
+      });
+
+      /* ---------------- Chassis finder ---------------- */
+      document.getElementById("chassisForm").addEventListener("submit", function (e) {
+        e.preventDefault();
+        var c = document.getElementById("fChassis").value.trim();
+        var m = document.getElementById("fModel").value;
+        var p = document.getElementById("fPart").value.trim();
+        window.open(waLink(t().finderMsg(c, m, p)), "_blank", "noopener");
+      });
+
+      /* ---------------- Language toggle ---------------- */
+      function applyLang(next) {
+        lang = next;
+        document.documentElement.lang = next === "bn" ? "bn" : "en";
+        document.getElementById("langEn").setAttribute("aria-pressed", next === "en" ? "true" : "false");
+        document.getElementById("langBn").setAttribute("aria-pressed", next === "bn" ? "true" : "false");
+        var dict = STR[next];
+        document.querySelectorAll("[data-i18n]").forEach(function (el) {
+          var k = el.getAttribute("data-i18n");
+          if (typeof dict[k] === "string") el.textContent = dict[k];
+        });
+        document.querySelectorAll("[data-i18n-html]").forEach(function (el) {
+          var k = el.getAttribute("data-i18n-html");
+          if (typeof dict[k] === "string") el.innerHTML = dict[k];
+        });
+        document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+          var k = el.getAttribute("data-i18n-ph");
+          if (typeof dict[k] === "string") el.setAttribute("placeholder", dict[k]);
+        });
+        renderChips(); renderParts(); syncCartUI();
+      }
+      document.getElementById("langEn").addEventListener("click", function () { applyLang("en"); });
+      document.getElementById("langBn").addEventListener("click", function () { applyLang("bn"); });
+
+      /* ---------------- Pull cord: pendulum physics + pull to toggle ----------------
+         FeralUI's spirit, original implementation: a rope hangs from a pivot.
+         Drag the knob down; past the threshold, releasing flips the theme.
+         The pivot then swings with damped spring physics until it settles. */
+      (function () {
+        var pivot = document.getElementById("cordPivot");
+        var line = document.getElementById("cordLine");
+        var knob = document.getElementById("cordKnob");
+        var root = document.documentElement;
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+        var BASE_LEN = 62, MAX_PULL = 86, THRESHOLD = 46;
+        var angle = 0, vel = 0, pull = 0;
+        var dragging = false, startY = 0, startX = 0, rafId = null, lastTs = 0;
+
+        function render() {
+          pivot.style.transform = "rotate(" + angle.toFixed(2) + "deg)";
+          line.style.height = (BASE_LEN + pull) + "px";
+        }
+        function physics(ts) {
+          if (!lastTs) lastTs = ts;
+          var dt = Math.min((ts - lastTs) / 1000, 0.05); lastTs = ts;
+          // Damped pendulum spring toward rest.
+          var k = 55, damping = 4.2;
+          var acc = -k * angle - damping * vel;
+          vel += acc * dt; angle += vel * dt;
+          if (!dragging && pull > 0) pull = Math.max(0, pull - pull * dt * 14 - 30 * dt);
+          render();
+          if (Math.abs(angle) > 0.02 || Math.abs(vel) > 0.02 || pull > 0.1 || dragging) {
+            rafId = requestAnimationFrame(physics);
+          } else {
+            angle = 0; pull = 0; render(); rafId = null; lastTs = 0;
+          }
+        }
+        function kick() { if (!rafId) { lastTs = 0; rafId = requestAnimationFrame(physics); } }
+        function toggleTheme() {
+          var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
+          root.setAttribute("data-theme", next);
+        }
+        knob.addEventListener("pointerdown", function (e) {
+          dragging = true; startY = e.clientY; startX = e.clientX;
+          knob.setPointerCapture(e.pointerId);
+          kick();
+          e.preventDefault();
+        });
+        knob.addEventListener("pointermove", function (e) {
+          if (!dragging) return;
+          var dy = e.clientY - startY;
+          var dx = e.clientX - startX;
+          pull = Math.max(0, Math.min(MAX_PULL, dy));
+          angle = Math.max(-16, Math.min(16, dx * 0.22));
+          vel = 0;
+          render();
+        });
+        function release(e) {
+          if (!dragging) return;
+          dragging = false;
+          var pulledEnough = pull > THRESHOLD;
+          var wasClick = pull < 6 && Math.abs(angle) < 3;
+          if (reduced) {
+            if (pulledEnough || wasClick) toggleTheme();
+            pull = 0; angle = 0; render();
+            return;
+          }
+          if (pulledEnough || wasClick) toggleTheme();
+          vel = (Math.random() * 2 - 1) * 6 + (pulledEnough ? 26 : 12) * (angle >= 0 ? 1 : -1) * 0.4 + 14;
+          if (Math.abs(vel) < 10) vel = 12;
+          kick();
+        }
+        knob.addEventListener("pointerup", release);
+        knob.addEventListener("pointercancel", release);
+        knob.addEventListener("keydown", function (e) {
+          if (e.key === "Enter" || e.key === " ") { /* native button click handles it */ }
+        });
+        knob.addEventListener("click", function (e) {
+          // Keyboard / assistive activation arrives as a click with no drag.
+          if (e.detail === 0) { toggleTheme(); vel = 10; if (!reduced) kick(); }
+        });
+        // A gentle idle sway on load so the cord feels alive.
+        if (!reduced) { vel = 7; kick(); }
+        render();
+      })();
+
+      /* ---------------- Init ---------------- */
+      renderChips();
+      renderParts();
+      syncCartUI();
+    </script>
+  </body>
+</html>
